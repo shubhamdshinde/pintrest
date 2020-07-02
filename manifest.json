@@ -1,0 +1,32 @@
+{
+    "name":"PintRest Image Downloader",
+    "author":"Vaibhav D Shinde",
+    "version":"1.0",
+   
+    "icons":{
+         "128":"weather.png"
+    },
+
+    "browser_action":{
+        "default_icon":"weather.png",
+        "default_popup":"popup.html"
+    },
+
+    "content_scripts": [{
+          "matches":["https://www.pinterest.ca/*"],
+          "js": ["content.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+
+    "permissions": [
+        "downloads",
+        "tabs"
+      ],
+
+    "manifest_version":2
+}
